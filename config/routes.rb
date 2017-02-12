@@ -13,7 +13,11 @@ Rails.application.routes.draw do
 
   get '/sessions'=>'users#show'
 
-  
+  get '/users/:id/edit'=>'users#edit'
+
+ 
+
+
 #   devise_scope :user do
 #   delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 # end
