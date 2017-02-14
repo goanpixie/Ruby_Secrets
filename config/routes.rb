@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   get '/users/:id/edit'=>'users#edit'
 
- 
+  patch '/users/:id' =>'users#update'
+
+
 
 
 #   devise_scope :user do
