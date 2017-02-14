@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-  	fail
+  	pass
   end
 
   def create
