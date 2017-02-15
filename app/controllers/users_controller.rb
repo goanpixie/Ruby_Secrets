@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-  	pass
+
   end
 
   def create
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.destroy
     session[:user_id] = nil
-    redirect_to new_sessions_path    
+    redirect_to '/users/new'    
   	end
 
     private
