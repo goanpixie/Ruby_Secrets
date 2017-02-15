@@ -1,8 +1,25 @@
+
+
 <h3>Welcome <%= @user.name %></h3>
 <h3><%= flash[:errors] %></h3>
-<p><a href= "/users/<%= @user.id %>/edit">Edit User</a></p>
+
+<br><br>
+
+<form action="/secrets" method="post">
+	
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label>New Secret:</label>
+	<input type="text" name="secret[content]"><br>
+	
+	<input type="submit" value="Create Secret">
+</form>
+<p><%= flash[:errors]%></p><br><br><br><br>
+
+
+
 <form action='/users/<%= @user.id %>' method='post'>
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
   <input name="_method" value="delete" type="hidden">
   <button type="submit">Delete Account</button>
 </form>
+<a href= "/users/<%= @user.id %>/edit">Edit User</a>
