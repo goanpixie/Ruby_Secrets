@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :secrets
 
+  resources :likes
+
   delete '/sessions' => 'sessions#destroy'
 
   post '/sessions'=>'sessions#create'
@@ -20,6 +22,10 @@ Rails.application.routes.draw do
   patch '/users/:id' =>'users#update'
 
   delete '/users/:id'=>'users#destroy'
+
+  delete '/secrets/:id'=>'secrets#destroy'
+
+  post '/secrets'=> 'secrets#create'
 
 
 
