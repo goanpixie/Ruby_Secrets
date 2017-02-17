@@ -8,8 +8,8 @@
 <form action="/secrets" method="post">
 	
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-	<label>New Secret:</label>
-	<input type="text" name="secret[content]"><br>
+	<label for="new secret">New Secret:</label>
+	<input id="new secret" type="text" name="secret[content]"><br>
 	
 	<input type="submit" value="Create Secret">
 </form>
@@ -33,4 +33,4 @@
   <input name="_method" value="delete" type="hidden">
   <button type="submit">Delete Account</button>
 </form>
-<a href= "/users/<%= @user.id %>/edit">Edit User</a>
+<a href= "/users/<%= @user.id %>/edit">Edit Profile</a>

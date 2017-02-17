@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.destroy
     session[:user_id] = nil
-    redirect_to '/users/new'    
+    redirect_to '/sessions/new'    
   	end
 
     private

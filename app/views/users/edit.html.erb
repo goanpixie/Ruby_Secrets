@@ -5,13 +5,13 @@
 <form action="/users/<%= @user.id %>" method="post">
 	<input type="hidden" name="_method" value="patch">
 	<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
-	<label> Name:</label>
-	<input type="string" name="user[name]" placeholder="<%= @user.name %>">
-	<label> Email:</label>
-	<input type="email" name="user[email]" placeholder="<%= @user.email%>">
+	<label for="name">Name:</label>
+	<input id="name" type="string" name="user[name]" placeholder="<%= @user.name %>">
+	<label for="email"> Email:</label>
+	<input id="email" type="email" name="user[email]" placeholder="<%= @user.email%>">
 
-	<label> Password:</label>
-	<input type="password" name="user[password]" placeholder="<%= @user.password%>">
+	<label for="password"> Password:</label>
+	<input id="password" type="password" name="user[password]" placeholder="<%= @user.password%>">
 	<input type="submit" value="Update">
 </form>
 
