@@ -1,16 +1,25 @@
-<form action="/users" method="post">
-	
-	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-	<label>Name:</label>
-	<input type="string" name="user[name]"><br>
-	<label>Email:</label>
-	<input type="string" name="user[email]"><br>
-	<label>Password:</label>
-	<input type="password" name="user[password]"><br>
-	<label >Confirm Password</label>
-	<input type="password" name="user[password_confirmation]"><br>
-	<input type="submit" value="Join">
+<form action='/users' method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <p>
+    <label for="email">Email</label>
+    <input id="email" type="email" name="user[email]" placeholder="Enter email">
+  </p>
+  <p>
+    <label for="name">Name</label>
+    <input id="name" type="text" name="user[name]" placeholder="Enter name">
+  </p>  
+  <p>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="user[password]" placeholder="Enter password">
+  </p>
+  <p>
+    <label for="password_confirmation">Password Confirmation</label>
+    <input id="password_confirmation" type="password" name="user[password_confirmation]" placeholder="Enter password">
+  </p> 
+  <button type="submit">Join</button>
 </form>
+
+
 <p><%= flash[:errors]%></p>
 
 <p>Already a member?<a href="/sessions/new"> Sign In</a></p>

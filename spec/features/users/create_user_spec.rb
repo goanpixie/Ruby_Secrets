@@ -14,7 +14,7 @@ RSpec.describe 'creating a user' do
 
     last_user = User.last
 
-    expect(current_path).to eq("/users/#{last_user.id}")
+    expect(current_path).to eq("/sessions/new")
   end
 
   it 'shows validation errors without proper credentials' do

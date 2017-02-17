@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  # get 'sessions/new'
 
-  root 'users#new'
+  root 'sessions#new'
 
   resources :users
 
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   post '/secrets'=> 'secrets#create'
 
-
+  post '/users' => 'users#create'
 
 
 #   devise_scope :user do
